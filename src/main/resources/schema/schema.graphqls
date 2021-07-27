@@ -1,9 +1,14 @@
 type Query {
     shows(titleFilter: String): [Show]
+    bars(foo: Int): Foo
 }
 
 type Show {
     id: Int
     title: String
     releaseYear: Int
+}
+
+type Foo {
+    id: Int
 }
