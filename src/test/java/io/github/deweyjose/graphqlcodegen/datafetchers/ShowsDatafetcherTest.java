@@ -1,5 +1,6 @@
 package io.github.deweyjose.graphqlcodegen.datafetchers;
 
+import com.acme.types.Show;
 import com.netflix.graphql.dgs.DgsQueryExecutor;
 import com.netflix.graphql.dgs.autoconfig.DgsAutoConfiguration;
 import io.github.deweyjose.graphqlcodegen.services.ShowsServiceImpl;
@@ -26,5 +27,21 @@ class ShowsDatafetcherTest {
                 "data.shows[*].title");
 
         assertThat(titles).contains("Ozark");
+    }
+
+    @Test
+    public void testCreateShow() {
+        Show show = dgsQueryExecutor.executeAndExtractJsonPathAsObject(
+                "mutation { " +
+                        "  createShow(showInput:{title:\"foo\", releaseYear:1980}) {" +
+                        "    id title releaseYear" +
+                        "  }" +
+                        "}",
+                "data.createShow",
+                Show.class
+        );
+        assertThat(show.getTitle()).isEqualTo("foo");
+        assertThat(show.getReleaseYear()).isEqualTo(1980);
+        assertThat(show.getId()).isNotNull();
     }
 }

@@ -7,18 +7,12 @@ import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.DgsData;
 import com.netflix.graphql.dgs.InputArgument;
 import io.github.deweyjose.graphqlcodegen.services.ShowsService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @DgsComponent
 public class ShowsDatafetcher {
-
-    private final static Logger log = LoggerFactory.getLogger(ShowsDatafetcher.class);
-
-
     private final ShowsService showsService;
 
 
