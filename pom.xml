@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>io.github.deweyjose</groupId>
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                <version>1.12</version>
+                <version>1.14</version>
                 <executions>
                     <execution>
                         <goals>
@@ -64,10 +64,10 @@
                 <configuration>
                     <packageName>com.acme</packageName>
                     <schemaPaths>
-                        <path>src/main/resources/schema/schema.graphqls</path>
+                        <path>src/main/resources/schema</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
-                    <!--<generateClient>true</generateClient>-->
+                    <writeToFiles>true</writeToFiles>
                 </configuration>
             </plugin>
             <plugin>
