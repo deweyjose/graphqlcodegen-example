@@ -8,23 +8,44 @@
     <artifactId>graphqlcodegen-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <dgs.version>4.9.3</dgs.version>
+        <sb.version>2.4.0</sb.version>
+        <sb.test.version>2.4.0</sb.test.version>
+        <junit.version>5.1.0</junit.version>
+        <log4j.version>2.13.3</log4j.version>
+    </properties>
+
     <dependencies>
+        <!-- Netflix -->
         <dependency>
             <groupId>com.netflix.graphql.dgs</groupId>
             <artifactId>graphql-dgs-spring-boot-starter</artifactId>
-            <version>3.1.1</version>
+            <version>${dgs.version}</version>
         </dependency>
+
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.4.0</version>
+            <version>${sb.version}</version>
         </dependency>
+
+        <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>2.4.0</version>
+            <version>${sb.test.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -46,7 +67,7 @@
                         <path>src/main/resources/schema/schema.graphqls</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
-                    <generateClient>true</generateClient>
+                    <!--<generateClient>true</generateClient>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -77,7 +98,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.0</version>
+                <version>${sb.version}</version>
             </plugin>
         </plugins>
     </build>
