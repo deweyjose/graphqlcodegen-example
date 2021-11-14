@@ -1,5 +1,6 @@
 type Query {
     shows(titleFilter: String): [Show]
+    bars(foo: Int): Foo
 }
 
 type Mutation {
@@ -15,6 +16,10 @@ type Show {
 input ShowInput {
     title: String!
     releaseYear: Int!
+}
+
+type Foo {
+    id: Int
 }
 
 
