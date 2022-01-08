@@ -14,7 +14,7 @@
     </modules>
 
     <properties>
-        <dgs.codegen.version>5.1.9</dgs.codegen.version>
+        <dgs.codegen.version>5.1.16</dgs.codegen.version>
         <dgs.version>4.9.3</dgs.version>
         <sb.version>2.4.0</sb.version>
         <sb.test.version>2.4.0</sb.test.version>
@@ -72,7 +72,7 @@
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
                     <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                    <version>1.14</version>
+                    <version>1.16</version>
                     <executions>
                         <execution>
                             <goals>
