@@ -6,7 +6,7 @@
 
 	<groupId>io.github.deweyjose</groupId>
 	<artifactId>graphqlcodegen-example</artifactId>
-	<version>1.4-SNAPSHOT</version>
+	<version>1.5-SNAPSHOT</version>
 
 	<properties>
 		<java.version>11</java.version>
@@ -14,7 +14,7 @@
 		<spring-boot-starter-web.version>2.4.0</spring-boot-starter-web.version>
 		<spring-boot-starter-test.version>2.4.0</spring-boot-starter-test.version>
 		<spring-boot-maven-plugin.version>2.4.0</spring-boot-maven-plugin.version>
-		<graphqlcodegen-maven-plugin.version>1.16</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.17</graphqlcodegen-maven-plugin.version>
 		<graphql-dgs-codegen-client-core.version>5.1.2</graphql-dgs-codegen-client-core.version>
 	</properties>
 
