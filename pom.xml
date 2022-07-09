@@ -14,8 +14,6 @@
     </modules>
 
     <properties>
-        <dgs.codegen.version>5.1.16</dgs.codegen.version>
-        <dgs.version>4.9.3</dgs.version>
         <sb.version>2.4.0</sb.version>
         <sb.test.version>2.4.0</sb.test.version>
         <junit.version>5.1.0</junit.version>
@@ -27,14 +25,17 @@
             <!-- Netflix -->
             <dependency>
                 <groupId>com.netflix.graphql.dgs</groupId>
-                <artifactId>graphql-dgs-spring-boot-starter</artifactId>
-                <version>${dgs.version}</version>
+                <artifactId>graphql-dgs-platform-dependencies</artifactId>
+                <!-- The DGS BOM/platform dependency. This is the only place you set version of DGS -->
+                <version>5.0.4</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.netflix.graphql.dgs.codegen</groupId>
                 <artifactId>graphql-dgs-codegen-client-core</artifactId>
-                <version>${dgs.codegen.version}</version>
+                <version>5.1.17</version>
             </dependency>
 
             <!-- Spring Boot -->
@@ -72,7 +73,7 @@
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
                     <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                    <version>1.15</version>
+                    <version>1.19</version>
                     <executions>
                         <execution>
                             <goals>
