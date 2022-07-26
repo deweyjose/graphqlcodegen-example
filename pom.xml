@@ -73,7 +73,7 @@
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
                     <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                    <version>1.19</version>
+                    <version>1.21</version>
                     <executions>
                         <execution>
                             <goals>
@@ -81,6 +81,9 @@
                             </goals>
                         </execution>
                     </executions>
+                    <configuration>
+                        <addGeneratedAnnotation>true</addGeneratedAnnotation>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
