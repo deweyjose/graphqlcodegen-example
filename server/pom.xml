@@ -39,6 +39,22 @@
                 <groupId>io.github.deweyjose</groupId>
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
                 <configuration>
+                    <includeImports>
+                        <bla>foo.foo</bla>
+                    </includeImports>
+                    <includeEnumImports>
+                        <foo>
+                            <properties>
+                                <bar>bla</bar>
+                            </properties>
+                        </foo>
+                        <bar>
+                            <properties>
+                                <zoo>bar.bar</zoo>
+                                <zing>bla.bla</zing>
+                            </properties>
+                        </bar>
+                    </includeEnumImports>
                     <packageName>com.acme</packageName>
                     <schemaPaths>
                         <path>src/main/resources/schema</path>
