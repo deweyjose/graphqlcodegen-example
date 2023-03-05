@@ -44,7 +44,7 @@
                         <path>src/main/resources/schema</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
-                    <generateClient>true</generateClient>
+                    <generateClientApiV2>true</generateClientApiV2>
                     <writeToFiles>true</writeToFiles>
                 </configuration>
             </plugin>
