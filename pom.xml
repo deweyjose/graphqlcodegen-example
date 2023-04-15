@@ -75,7 +75,7 @@
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
                     <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                    <version>1.30</version>
+                    <version>1.32</version>
                     <executions>
                         <execution>
                             <goals>
