@@ -14,12 +14,13 @@
     </modules>
 
     <properties>
+        <graphql-codegen-plugin.version>1.33</graphql-codegen-plugin.version>
         <sb.version>2.4.0</sb.version>
         <sb.test.version>2.4.0</sb.test.version>
         <junit.version>5.1.0</junit.version>
         <log4j.version>2.13.3</log4j.version>
         <dgs.framework.version>5.4.4</dgs.framework.version>
-        <dgs.codegen.version>5.1.17</dgs.codegen.version>
+        <dgs.codegen.client.version>5.1.17</dgs.codegen.client.version>
     </properties>
 
     <dependencyManagement>
@@ -37,7 +38,7 @@
             <dependency>
                 <groupId>com.netflix.graphql.dgs.codegen</groupId>
                 <artifactId>graphql-dgs-codegen-client-core</artifactId>
-                <version>${dgs.codegen.version}</version>
+                <version>${dgs.codegen.client.version}</version>
             </dependency>
 
             <!-- Spring Boot -->
@@ -75,7 +76,7 @@
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
                     <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                    <version>1.32</version>
+                    <version>${graphql-codegen-plugin.version}</version>
                     <executions>
                         <execution>
                             <goals>
