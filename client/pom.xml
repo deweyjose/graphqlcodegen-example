@@ -5,13 +5,17 @@
     <parent>
         <artifactId>graphqlcodegen-example</artifactId>
         <groupId>io.github.deweyjose</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>client</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.netflix.graphql.dgs.codegen</groupId>
             <artifactId>graphql-dgs-codegen-client-core</artifactId>
@@ -20,16 +24,6 @@
         <dependency>
             <groupId>com.netflix.graphql.dgs</groupId>
             <artifactId>graphql-dgs-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
         </dependency>
     </dependencies>
 
@@ -44,7 +38,7 @@
                         <path>src/main/resources/schema</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
-                    <generateClientApiV2>true</generateClientApiV2>
+                    <generateClientApi>true</generateClientApi>
                     <writeToFiles>true</writeToFiles>
                 </configuration>
             </plugin>

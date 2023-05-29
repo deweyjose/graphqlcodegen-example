@@ -1,61 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <packaging>pom</packaging>
 
     <groupId>io.github.deweyjose</groupId>
     <artifactId>graphqlcodegen-example</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>graphqlcodegen-example</name>
+    <description>Demo project for GraphQL Codegen</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <junit.version>5.9.2</junit.version>
+        <project-surefire-plugin.version>3.0.0-M5</project-surefire-plugin.version>
+        <graphql-codegen-plugin.version>1.33</graphql-codegen-plugin.version>
+        <dgs.framework.version>7.0.0</dgs.framework.version>
+        <dgs.codegen.client.version>5.1.17</dgs.codegen.client.version>
+    </properties>
+
     <modules>
         <module>server</module>
         <module>client</module>
     </modules>
 
-    <properties>
-        <graphql-codegen-plugin.version>1.33</graphql-codegen-plugin.version>
-        <sb.version>2.4.0</sb.version>
-        <sb.test.version>2.4.0</sb.test.version>
-        <junit.version>5.1.0</junit.version>
-        <log4j.version>2.13.3</log4j.version>
-        <dgs.framework.version>5.4.4</dgs.framework.version>
-        <dgs.codegen.client.version>5.1.17</dgs.codegen.client.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
-            <!-- Netflix -->
             <dependency>
                 <groupId>com.netflix.graphql.dgs</groupId>
                 <artifactId>graphql-dgs-platform-dependencies</artifactId>
-                <!-- The DGS BOM/platform dependency. This is the only place you set version of DGS -->
                 <version>${dgs.framework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
                 <groupId>com.netflix.graphql.dgs.codegen</groupId>
                 <artifactId>graphql-dgs-codegen-client-core</artifactId>
                 <version>${dgs.codegen.client.version}</version>
             </dependency>
-
-            <!-- Spring Boot -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${sb.version}</version>
-            </dependency>
-
-            <!-- Testing -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${sb.test.version}</version>
-                <scope>test</scope>
-            </dependency>
-
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
@@ -65,6 +54,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -72,6 +74,10 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
                 </plugin>
                 <plugin>
                     <groupId>io.github.deweyjose</groupId>
@@ -85,16 +91,7 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <generateClientApi>true</generateClientApi>
                         <addGeneratedAnnotation>true</addGeneratedAnnotation>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>11</source>
-                        <target>11</target>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -113,11 +110,6 @@
                             </configuration>
                         </execution>
                     </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${sb.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
