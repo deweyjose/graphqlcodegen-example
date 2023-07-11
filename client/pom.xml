@@ -38,8 +38,9 @@
                         <path>src/main/resources/schema</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
-                    <generateClientApi>true</generateClientApi>
+                    <generateClientApiV2>true</generateClientApiV2>
                     <writeToFiles>true</writeToFiles>
+                    <generateDocs>true</generateDocs>
                 </configuration>
             </plugin>
             <plugin>
