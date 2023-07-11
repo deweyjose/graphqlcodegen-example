@@ -20,7 +20,7 @@ public class Main {
                 ShowsGraphQLQuery.newRequest()
                         .queryName("shows")
                         .build(),
-                new ShowsProjectionRoot<>()
+                new ShowsProjectionRoot()
                         .id()
                         .title()
 
