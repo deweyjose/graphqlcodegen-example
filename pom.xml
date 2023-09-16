@@ -21,7 +21,7 @@
         <java.version>17</java.version>
         <junit.version>5.9.2</junit.version>
         <project-surefire-plugin.version>3.0.0-M5</project-surefire-plugin.version>
-        <graphql-codegen-plugin.version>1.39</graphql-codegen-plugin.version>
+        <graphql-codegen-plugin.version>1.40</graphql-codegen-plugin.version>
         <dgs.framework.version>7.0.0</dgs.framework.version>
         <dgs.codegen.client.version>5.1.17</dgs.codegen.client.version>
     </properties>
