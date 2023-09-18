@@ -3,6 +3,7 @@ type Query {
     bars(foo: Int): Foo
 }
 
+
 type Mutation {
    createShow(showInput: ShowInput!): Show
 }

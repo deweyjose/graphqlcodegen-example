@@ -34,8 +34,9 @@
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
                 <configuration>
                     <packageName>com.acme</packageName>
-                    <schemaPaths>
-                        <path>src/main/resources/schema</path>
+                        <schemaPaths>
+                        <path>src/main/resources/schema/1/schema.graphqls</path>
+                        <path>src/main/resources/schema/2</path>
                     </schemaPaths>
                     <generateBoxedTypes>true</generateBoxedTypes>
                     <generateClientApi>true</generateClientApi>
