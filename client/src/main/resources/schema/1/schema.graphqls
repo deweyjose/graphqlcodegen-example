@@ -19,9 +19,12 @@ input ShowInput {
     releaseYear: Int!
 }
 
+enum NumberEnum {
+  ONE,
+  TWO
+}
+
 type Foo {
     id: Int
     bar: Boolean!
 }
-
-

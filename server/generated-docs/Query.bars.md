@@ -8,7 +8,7 @@
 ## Example
 ```graphql
 {
-  bars(foo: 7519900106953792134) {
+  bars(foo: 123456789) {
     id
   }
 }
