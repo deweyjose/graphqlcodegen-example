@@ -3,3 +3,12 @@ type Actor {
   name: String!
   yob: Int!
 }
+
+type Subscription {
+  commentAdded(postID: ID!): Comment
+}
+
+type Comment {
+  id: ID!
+  text: String!
+}
