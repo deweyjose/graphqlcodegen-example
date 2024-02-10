@@ -24,11 +24,14 @@
         <graphql-codegen-plugin.version>1.60.0</graphql-codegen-plugin.version>
         <dgs.framework.version>8.2.2</dgs.framework.version>
         <dgs.codegen.shared.core.version>5.12.4</dgs.codegen.shared.core.version>
+        <lombok.version>1.18.30</lombok.version>
+        <jackson-databind.version>2.15.0</jackson-databind.version>
     </properties>
 
     <modules>
         <module>server</module>
         <module>client</module>
+        <module>common</module>
     </modules>
 
     <dependencyManagement>
@@ -51,6 +54,11 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>{jackson-databind.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -64,6 +72,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -94,6 +108,9 @@
                         <generateIsGetterForPrimitiveBooleanFields>true</generateIsGetterForPrimitiveBooleanFields>
                         <addGeneratedAnnotation>true</addGeneratedAnnotation>
                         <generateDocs>true</generateDocs>
+                        <typeMappingPropertiesFiles>
+                            <typeMappingPropertiesFile>graphql/common-type-mappings.properties</typeMappingPropertiesFile>
+                        </typeMappingPropertiesFiles>
                     </configuration>
                 </plugin>
                 <plugin>

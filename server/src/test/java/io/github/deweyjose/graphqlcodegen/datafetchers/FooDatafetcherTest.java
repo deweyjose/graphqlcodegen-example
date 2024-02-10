@@ -1,8 +1,8 @@
 package io.github.deweyjose.graphqlcodegen.datafetchers;
 
-import com.acme.types.Foo;
 import com.netflix.graphql.dgs.DgsQueryExecutor;
 import com.netflix.graphql.dgs.autoconfig.DgsAutoConfiguration;
+import io.github.deweyjose.Foo;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
