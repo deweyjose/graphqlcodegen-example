@@ -41,10 +41,10 @@
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
                 <configuration>
                     <packageName>com.acme</packageName>
-                        <schemaPaths>
-                        <path>src/main/resources/schema/1/schema.graphqls</path>
-                        <path>src/main/resources/schema/2</path>
-                    </schemaPaths>
+                    <schemaJarFilesFromDependencies>
+                        <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
+                        <param>io.github.deweyjose:server:0.0.1-SNAPSHOT</param>
+                    </schemaJarFilesFromDependencies>
                     <generateBoxedTypes>true</generateBoxedTypes>
                     <generateClientApi>true</generateClientApi>
                     <writeToFiles>true</writeToFiles>

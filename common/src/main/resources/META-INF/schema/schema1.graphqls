@@ -7,12 +7,6 @@ type Mutation {
    createShow(showInput: ShowInput!): Show
 }
 
-type Show {
-    id: Int!
-    title: String
-    releaseYear: Int
-}
-
 input ShowInput {
     title: String!
     releaseYear: Int!

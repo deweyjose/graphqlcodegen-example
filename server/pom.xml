@@ -73,9 +73,11 @@
                     </includeEnumImports>
                     <packageName>com.acme</packageName>
                     <schemaPaths>
-                        <path>src/main/resources/schema/schema.graphqls</path>
                         <path>src/main/resources/schema/schema2.graphqls</path>
                     </schemaPaths>
+                    <schemaJarFilesFromDependencies>
+                        <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
+                    </schemaJarFilesFromDependencies>
                     <generateBoxedTypes>true</generateBoxedTypes>
                     <writeToFiles>true</writeToFiles>
                     <generateDocs>true</generateDocs>
