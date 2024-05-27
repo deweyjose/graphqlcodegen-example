@@ -8,7 +8,11 @@ type Subscription {
   commentAdded(postID: ID!): Comment
 }
 
-type Comment {
+interface Blarg {
+  text: String!
+}
+
+type Comment implements Blarg {
   id: ID!
   text: String!
 }

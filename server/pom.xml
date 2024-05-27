@@ -81,6 +81,8 @@
                     <generateBoxedTypes>true</generateBoxedTypes>
                     <writeToFiles>true</writeToFiles>
                     <generateDocs>true</generateDocs>
+                    <generateInterfaceSetters>true</generateInterfaceSetters>
+                    <generateInterfaceMethodsForInterfaceFields>false</generateInterfaceMethodsForInterfaceFields>
                 </configuration>
             </plugin>
             <plugin>
