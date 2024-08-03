@@ -1,3 +1,20 @@
+type Query {
+    books: [Book]
+    publishers: [Publisher]
+    authors: [Author]
+}
+
+type Mutation {
+    addPage(bookId: ID!, number: Int!, content: String!): Page
+    addPublisher(name: String!): Publisher
+    addAuthor(name: String!): Author
+    addBook(book: BookInput!): Book
+}
+
+input BookInput {
+    title: String!
+}
+
 type Book {
     id: ID!
     title: String!
@@ -8,20 +25,6 @@ type Page {
     id: ID!
     number: Int!
     content: String!
-}
-
-type Query {
-    books: [Book]
-    publishers: [Publisher]
-    authors: [Author]
-}
-
-
-
-type Mutation {
-    addPage(bookId: ID!, number: Int!, content: String!): Page
-    addPublisher(name: String!): Publisher
-    addAuthor(name: String!): Author
 }
 
 type Publisher {

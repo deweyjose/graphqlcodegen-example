@@ -43,9 +43,11 @@
                     <packageName>com.acme</packageName>
                     <generateClientApiV2>true</generateClientApiV2>
                     <includeMutations>
-                        <param>addPage</param>
+                        <param>addBook</param>
                     </includeMutations>
-                    <includeQueries></includeQueries>
+                    <includeQueries>
+                        <param>-</param>
+                    </includeQueries>
                     <includeSubscriptions></includeSubscriptions>
                     <skipEntityQueries>true</skipEntityQueries>
                     <maxProjectionDepth>2</maxProjectionDepth>
