@@ -41,14 +41,18 @@
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
                 <configuration>
                     <packageName>com.acme</packageName>
-                    <schemaJarFilesFromDependencies>
-                        <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
-                        <param>io.github.deweyjose:server:0.0.1-SNAPSHOT</param>
-                    </schemaJarFilesFromDependencies>
-                    <generateBoxedTypes>true</generateBoxedTypes>
-                    <generateClientApi>true</generateClientApi>
-                    <writeToFiles>true</writeToFiles>
-                    <generateDocs>true</generateDocs>
+                    <generateClientApiV2>true</generateClientApiV2>
+                    <includeMutations>
+                        <param>addPage</param>
+                    </includeMutations>
+                    <includeQueries></includeQueries>
+                    <includeSubscriptions></includeSubscriptions>
+                    <skipEntityQueries>true</skipEntityQueries>
+                    <maxProjectionDepth>2</maxProjectionDepth>
+                    <generateDataTypes>false</generateDataTypes>
+                    <schemaPaths>
+                        <param>src/main/resources/schema/schema.graphqls</param>
+                    </schemaPaths>
                 </configuration>
             </plugin>
             <plugin>

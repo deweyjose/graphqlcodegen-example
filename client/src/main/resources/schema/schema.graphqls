@@ -1,0 +1,37 @@
+type Book {
+    id: ID!
+    title: String!
+    pages: [Page]
+}
+
+type Page {
+    id: ID!
+    number: Int!
+    content: String!
+}
+
+type Query {
+    books: [Book]
+    publishers: [Publisher]
+    authors: [Author]
+}
+
+
+
+type Mutation {
+    addPage(bookId: ID!, number: Int!, content: String!): Page
+    addPublisher(name: String!): Publisher
+    addAuthor(name: String!): Author
+}
+
+type Publisher {
+    id: ID!
+    name: String!
+    books: [Book]
+}
+
+type Author {
+    id: ID!
+    name: String!
+    books: [Book]
+}
