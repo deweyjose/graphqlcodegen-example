@@ -1,0 +1,4 @@
+type Chair {
+  id: ID!
+  name: String!
+}
