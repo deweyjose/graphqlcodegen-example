@@ -40,6 +40,9 @@
                 <groupId>io.github.deweyjose</groupId>
                 <artifactId>graphqlcodegen-maven-plugin</artifactId>
                 <configuration>
+                    <typeMapping>
+                        <Locale>java.util.Locale</Locale>
+                    </typeMapping>
                     <packageName>com.acme</packageName>
                     <schemaJarFilesFromDependencies>
                         <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
