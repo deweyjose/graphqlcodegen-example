@@ -1,5 +1,6 @@
 import com.acme.client.ShowsGraphQLQuery;
 import com.acme.client.ShowsProjectionRoot;
+import com.acme.types.Comment;
 import com.netflix.graphql.dgs.client.GraphQLResponse;
 import com.netflix.graphql.dgs.client.MonoGraphQLClient;
 import com.netflix.graphql.dgs.client.WebClientGraphQLClient;
@@ -11,6 +12,7 @@ import reactor.core.publisher.Mono;
 public class Main {
   public static void main(String args[]) {
     // Configure a WebClient for your needs, e.g. including authentication headers and TLS.
+    Comment comment = Comment.newBuilder().id("1").build();
     WebClient webClient = WebClient.create("http://localhost:8080/graphql");
     WebClientGraphQLClient client = MonoGraphQLClient.createWithWebClient(webClient);
 
