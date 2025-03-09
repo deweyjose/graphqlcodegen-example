@@ -1,0 +1,11 @@
+type Query {
+    shows(titleFilter: String): [Show!]
+}
+
+type Mutation {
+   createShow(showInput: ShowInput!): Show!
+}
+
+type Subscription {
+  commentAdded(postID: ID!): Comment
+}

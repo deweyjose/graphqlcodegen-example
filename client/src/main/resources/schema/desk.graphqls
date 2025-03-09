@@ -1,5 +1,0 @@
-type Desk {
-    id: ID!
-    name: String!
-    chairs: [Chair!]!
-}

@@ -1,7 +1,0 @@
-scalar Locale
-
-type Chair {
-  id: ID!
-  name: String!
-  description: Locale!
-}
