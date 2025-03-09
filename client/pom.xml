@@ -55,6 +55,7 @@
           <typeMappingPropertiesFiles>
             <typeMappingPropertiesFile>src/main/resources/common-type-mappings.properties</typeMappingPropertiesFile>
           </typeMappingPropertiesFiles>
+          <onlyGenerated>true</onlyGenerated>
         </configuration>
       </plugin>
       <plugin>
