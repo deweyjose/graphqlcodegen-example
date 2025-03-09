@@ -59,9 +59,9 @@
           <includeQueries>
             <param>shows</param>
           </includeQueries>
-          <includeMutations>
-            <param>""</param>
-          </includeMutations>
+<!--          <includeMutations>-->
+<!--            <param>""</param>-->
+<!--          </includeMutations>-->
         </configuration>
       </plugin>
       <plugin>
