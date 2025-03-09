@@ -1,6 +1,8 @@
-package io.github.deweyjose.graphqlcodegen.services;
+package io.github.deweyjose.graphqlcodegen.example.services;
 
-import com.acme.types.Show;
+
+
+import io.github.deweyjose.graphqlcodegen.example.common.Show;
 import com.acme.types.ShowInput;
 import graphql.com.google.common.collect.Lists;
 import java.util.List;
@@ -11,11 +13,11 @@ public class ShowsServiceImpl implements ShowsService {
 
   private List<Show> shows =
       Lists.newArrayList(
-          Show.newBuilder().id(1).title("Stranger Things").releaseYear(2016).build(),
-          Show.newBuilder().id(2).title("Ozark").releaseYear(2017).build(),
-          Show.newBuilder().id(3).title("The Crown").releaseYear(2016).build(),
-          Show.newBuilder().id(4).title("Dead to Me").releaseYear(2019).build(),
-          Show.newBuilder().id(5).title("Orange is the New Black").releaseYear(2013).build());
+          Show.builder().id(1).title("Stranger Things").releaseYear(2016).build(),
+          Show.builder().id(2).title("Ozark").releaseYear(2017).build(),
+          Show.builder().id(3).title("The Crown").releaseYear(2016).build(),
+          Show.builder().id(4).title("Dead to Me").releaseYear(2019).build(),
+          Show.builder().id(5).title("Orange is the New Black").releaseYear(2013).build());
 
   @Override
   public List<Show> shows() {
@@ -25,7 +27,7 @@ public class ShowsServiceImpl implements ShowsService {
   @Override
   public Show add(ShowInput input) {
     Show show =
-        Show.newBuilder()
+        Show.builder()
             .id(shows.size() + 1)
             .title(input.getTitle())
             .releaseYear(input.getReleaseYear())

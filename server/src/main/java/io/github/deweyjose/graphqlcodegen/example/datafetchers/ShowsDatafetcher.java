@@ -1,12 +1,13 @@
-package io.github.deweyjose.graphqlcodegen.datafetchers;
+package io.github.deweyjose.graphqlcodegen.example.datafetchers;
 
 import com.acme.DgsConstants;
-import com.acme.types.Show;
+
 import com.acme.types.ShowInput;
 import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.DgsData;
 import com.netflix.graphql.dgs.InputArgument;
-import io.github.deweyjose.graphqlcodegen.services.ShowsService;
+import io.github.deweyjose.graphqlcodegen.example.common.Show;
+import io.github.deweyjose.graphqlcodegen.example.services.ShowsService;
 import java.util.List;
 import java.util.stream.Collectors;
 

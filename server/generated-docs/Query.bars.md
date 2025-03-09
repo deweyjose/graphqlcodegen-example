@@ -3,12 +3,12 @@
 ## Arguments
 | Name | Description | Required | Type |
 | :--- | :---------- | :------: | :--: |
-| foo |  | Optional | Int |
+| foozle |  | Optional | Int |
             
 ## Example
 ```graphql
 {
-  bars(foo: 123456789) {
+  bars(foozle: 123456789) {
     id
   }
 }

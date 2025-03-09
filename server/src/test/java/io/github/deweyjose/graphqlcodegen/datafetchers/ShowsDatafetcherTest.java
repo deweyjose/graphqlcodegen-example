@@ -2,10 +2,11 @@ package io.github.deweyjose.graphqlcodegen.datafetchers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.acme.types.Show;
 import com.netflix.graphql.dgs.DgsQueryExecutor;
 import com.netflix.graphql.dgs.autoconfig.DgsAutoConfiguration;
-import io.github.deweyjose.graphqlcodegen.services.ShowsServiceImpl;
+import io.github.deweyjose.graphqlcodegen.example.common.Show;
+import io.github.deweyjose.graphqlcodegen.example.datafetchers.ShowsDatafetcher;
+import io.github.deweyjose.graphqlcodegen.example.services.ShowsServiceImpl;
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package io.github.deweyjose.graphqlcodegen.datafetchers;
+package io.github.deweyjose.graphqlcodegen.example.datafetchers;
 
 import com.acme.types.Comment;
 import com.netflix.graphql.dgs.DgsComponent;
