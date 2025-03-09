@@ -47,7 +47,6 @@
           <packageName>com.acme</packageName>
           <schemaJarFilesFromDependencies>
             <param>io.github.deweyjose.graphqlcodegen-example:common:0.0.1-SNAPSHOT</param>
-            <param>io.github.deweyjose.graphqlcodegen-example:server:0.0.1-SNAPSHOT</param>
           </schemaJarFilesFromDependencies>
           <generateBoxedTypes>true</generateBoxedTypes>
           <generateClientApi>true</generateClientApi>
