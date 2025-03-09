@@ -56,6 +56,9 @@
             <typeMappingPropertiesFile>src/main/resources/common-type-mappings.properties</typeMappingPropertiesFile>
           </typeMappingPropertiesFiles>
           <onlyGenerated>true</onlyGenerated>
+          <includeQueries>
+            <param>shows</param>
+          </includeQueries>
           <includeMutations>
             <param>""</param>
           </includeMutations>

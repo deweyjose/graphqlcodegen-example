@@ -1,5 +1,6 @@
 type Query {
     shows(titleFilter: String): [Show!]
+    doNotCodeGen(titleFilter: String): [Show!]
 }
 
 type Mutation {
