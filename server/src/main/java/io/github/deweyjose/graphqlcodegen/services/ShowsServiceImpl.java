@@ -3,36 +3,36 @@ package io.github.deweyjose.graphqlcodegen.services;
 import com.acme.types.Show;
 import com.acme.types.ShowInput;
 import graphql.com.google.common.collect.Lists;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class ShowsServiceImpl implements ShowsService {
 
-    private List<Show> shows = Lists.newArrayList(
-            Show.newBuilder().id(1).title("Stranger Things").releaseYear(2016).build(),
-            Show.newBuilder().id(2).title("Ozark").releaseYear(2017).build(),
-            Show.newBuilder().id(3).title("The Crown").releaseYear(2016).build(),
-            Show.newBuilder().id(4).title("Dead to Me").releaseYear(2019).build(),
-            Show.newBuilder().id(5).title("Orange is the New Black").releaseYear(2013).build()
-    );
+  private List<Show> shows =
+      Lists.newArrayList(
+          Show.newBuilder().id(1).title("Stranger Things").releaseYear(2016).build(),
+          Show.newBuilder().id(2).title("Ozark").releaseYear(2017).build(),
+          Show.newBuilder().id(3).title("The Crown").releaseYear(2016).build(),
+          Show.newBuilder().id(4).title("Dead to Me").releaseYear(2019).build(),
+          Show.newBuilder().id(5).title("Orange is the New Black").releaseYear(2013).build());
 
-    @Override
-    public List<Show> shows() {
-        return shows;
-    }
+  @Override
+  public List<Show> shows() {
+    return shows;
+  }
 
-    @Override
-    public Show add(ShowInput input) {
-        Show show = Show.newBuilder()
-                .id(shows.size()+1)
-                .title(input.getTitle())
-                .releaseYear(input.getReleaseYear())
-                .build();
+  @Override
+  public Show add(ShowInput input) {
+    Show show =
+        Show.newBuilder()
+            .id(shows.size() + 1)
+            .title(input.getTitle())
+            .releaseYear(input.getReleaseYear())
+            .build();
 
-        shows.add(show);
+    shows.add(show);
 
-        return show;
-    }
+    return show;
+  }
 }

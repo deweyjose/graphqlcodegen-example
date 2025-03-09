@@ -7,8 +7,8 @@ import io.github.deweyjose.Foo;
 
 @DgsComponent
 public class FooDatafetcher {
-    @DgsQuery(field = "bars")
-    public Foo foos(@InputArgument("foo") Integer fooId) {
-        return Foo.builder().id(fooId).build();
-    }
+  @DgsQuery(field = "bars")
+  public Foo foos(@InputArgument("foo") Integer fooId) {
+    return Foo.builder().id(fooId).build();
+  }
 }

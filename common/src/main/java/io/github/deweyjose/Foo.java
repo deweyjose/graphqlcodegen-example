@@ -10,6 +10,6 @@ import lombok.extern.jackson.Jacksonized;
 @AllArgsConstructor
 @Jacksonized
 public class Foo {
-    private int id;
-    private boolean bar;
+  private int id;
+  private boolean bar;
 }
