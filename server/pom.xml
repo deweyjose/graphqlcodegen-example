@@ -1,107 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>io.github.deweyjose</groupId>
+    <artifactId>graphqlcodegen-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>server</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.github.deweyjose</groupId>
+      <artifactId>common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.netflix.graphql.dgs</groupId>
+      <artifactId>graphql-dgs-subscriptions-websockets-autoconfigure</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.netflix.graphql.dgs</groupId>
+      <artifactId>graphql-dgs-spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.netflix.graphql.dgs.codegen</groupId>
+      <artifactId>graphql-dgs-codegen-shared-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
         <groupId>io.github.deweyjose</groupId>
-        <artifactId>graphqlcodegen-example</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>server</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.github.deweyjose</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.netflix.graphql.dgs</groupId>
-            <artifactId>graphql-dgs-subscriptions-websockets-autoconfigure</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.netflix.graphql.dgs</groupId>
-            <artifactId>graphql-dgs-spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.netflix.graphql.dgs.codegen</groupId>
-            <artifactId>graphql-dgs-codegen-shared-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>io.github.deweyjose</groupId>
-                <artifactId>graphqlcodegen-maven-plugin</artifactId>
-                <configuration>
-                    <includeImports>
-                        <bla>foo.foo</bla>
-                    </includeImports>
-                    <includeEnumImports>
-                        <foo>
-                            <properties>
-                                <bar>bla</bar>
-                            </properties>
-                        </foo>
-                        <bar>
-                            <properties>
-                                <zoo>bar.bar</zoo>
-                                <zing>bla.bla</zing>
-                            </properties>
-                        </bar>
-                    </includeEnumImports>
-                    <packageName>com.acme</packageName>
-                    <schemaPaths>
-                        <path>src/main/resources/schema/schema2.graphqls</path>
-                    </schemaPaths>
-                    <schemaJarFilesFromDependencies>
-                        <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
-                    </schemaJarFilesFromDependencies>
-                    <generateBoxedTypes>true</generateBoxedTypes>
-                    <writeToFiles>true</writeToFiles>
-                    <generateDocs>true</generateDocs>
-                    <generateInterfaceSetters>true</generateInterfaceSetters>
-                    <generateInterfaceMethodsForInterfaceFields>false</generateInterfaceMethodsForInterfaceFields>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>${project.build.directory}/generated-sources</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+        <artifactId>graphqlcodegen-maven-plugin</artifactId>
+        <configuration>
+          <includeImports>
+            <bla>foo.foo</bla>
+          </includeImports>
+          <includeEnumImports>
+            <foo>
+              <properties>
+                <bar>bla</bar>
+              </properties>
+            </foo>
+            <bar>
+              <properties>
+                <zoo>bar.bar</zoo>
+                <zing>bla.bla</zing>
+              </properties>
+            </bar>
+          </includeEnumImports>
+          <packageName>com.acme</packageName>
+          <schemaPaths>
+            <path>src/main/resources/schema/schema2.graphqls</path>
+          </schemaPaths>
+          <schemaJarFilesFromDependencies>
+            <param>io.github.deweyjose:common:0.0.1-SNAPSHOT</param>
+          </schemaJarFilesFromDependencies>
+          <generateBoxedTypes>true</generateBoxedTypes>
+          <writeToFiles>true</writeToFiles>
+          <generateDocs>true</generateDocs>
+          <generateInterfaceSetters>true</generateInterfaceSetters>
+          <generateInterfaceMethodsForInterfaceFields>false
+          </generateInterfaceMethodsForInterfaceFields>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${project.build.directory}/generated-sources</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
