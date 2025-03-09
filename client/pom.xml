@@ -42,6 +42,7 @@
         <configuration>
           <typeMapping>
             <Locale>java.util.Locale</Locale>
+            <Show>io.github.deweyjose.graphqlcodegen.example.common.Show</Show>
           </typeMapping>
           <packageName>com.acme</packageName>
           <schemaJarFilesFromDependencies>
@@ -52,6 +53,9 @@
           <generateClientApi>true</generateClientApi>
           <writeToFiles>true</writeToFiles>
           <generateDocs>true</generateDocs>
+          <typeMappingPropertiesFiles>
+            <typeMappingPropertiesFile>src/main/resources/common-type-mappings.properties</typeMappingPropertiesFile>
+          </typeMappingPropertiesFiles>
         </configuration>
       </plugin>
       <plugin>
