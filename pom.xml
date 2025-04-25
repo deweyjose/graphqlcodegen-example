@@ -21,9 +21,9 @@
     <java.version>17</java.version>
     <junit.version>5.9.2</junit.version>
     <project-surefire-plugin.version>3.0.0-M5</project-surefire-plugin.version>
-    <graphql-codegen-plugin.version>2.0.0</graphql-codegen-plugin.version>
+    <graphql-codegen-plugin.version>3.0.0</graphql-codegen-plugin.version>
     <dgs.framework.version>8.2.2</dgs.framework.version>
-    <dgs.codegen.shared.core.version>5.12.4</dgs.codegen.shared.core.version>
+    <dgs.codegen.shared.core.version>8.0.2</dgs.codegen.shared.core.version>
     <lombok.version>1.18.30</lombok.version>
     <jackson-databind.version>2.15.0</jackson-databind.version>
   </properties>
