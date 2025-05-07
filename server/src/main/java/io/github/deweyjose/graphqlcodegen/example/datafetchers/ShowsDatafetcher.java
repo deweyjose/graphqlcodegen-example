@@ -23,7 +23,7 @@ public class ShowsDatafetcher {
    * This datafetcher resolves the shows field on Query. It uses an @InputArgument to get the
    * titleFilter from the Query if one is defined.
    */
-  @DgsData(parentType = DgsConstants.QUERY_TYPE, field = DgsConstants.QUERY.Shows)
+  @DgsData(parentType = "Query", field = "shows")
   public List<Show> shows(@InputArgument("titleFilter") String titleFilter) {
     if (titleFilter == null) {
       return showsService.shows();
@@ -34,7 +34,7 @@ public class ShowsDatafetcher {
         .collect(Collectors.toList());
   }
 
-  @DgsData(parentType = DgsConstants.MUTATION.TYPE_NAME, field = DgsConstants.MUTATION.CreateShow)
+  @DgsData(parentType = "Mutation", field = "createShow")
   public Show createShow(@InputArgument("showInput") ShowInput showInput) {
     return showsService.add(showInput);
   }
