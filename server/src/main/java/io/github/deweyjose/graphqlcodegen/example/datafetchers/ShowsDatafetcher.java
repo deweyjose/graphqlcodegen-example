@@ -1,7 +1,5 @@
 package io.github.deweyjose.graphqlcodegen.example.datafetchers;
 
-import com.acme.DgsConstants;
-
 import com.acme.types.ShowInput;
 import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.DgsData;

@@ -26,12 +26,8 @@ public class Main {
   public static void getShows(WebClientGraphQLClient client) {
     String query =
         new GraphQLQueryRequest(
-            ShowsGraphQLQuery.newRequest()
-                .queryName("shows")
-                .build(),
-            new ShowsProjectionRoot()
-                .id()
-                .title())
+                ShowsGraphQLQuery.newRequest().queryName("shows").build(),
+                new ShowsProjectionRoot().id().title())
             .serialize();
 
     Mono<GraphQLResponse> graphQLResponseMono = client.reactiveExecuteQuery(query);
@@ -47,16 +43,11 @@ public class Main {
   public static void addShow(WebClientGraphQLClient client) {
     String query =
         new GraphQLQueryRequest(
-            CreateShowGraphQLQuery.newRequest()
-                .queryName("createShow")
-                .showInput(ShowInput.newBuilder()
-                    .releaseYear(2025)
-                    .title("New Show")
-                    .build())
-                .build(),
-            new ShowsProjectionRoot()
-                .id()
-                .title())
+                CreateShowGraphQLQuery.newRequest()
+                    .queryName("createShow")
+                    .showInput(ShowInput.newBuilder().releaseYear(2025).title("New Show").build())
+                    .build(),
+                new ShowsProjectionRoot().id().title())
             .serialize();
 
     Mono<GraphQLResponse> graphQLResponseMono = client.reactiveExecuteQuery(query);

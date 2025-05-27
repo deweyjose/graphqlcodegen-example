@@ -58,6 +58,11 @@
         <artifactId>graphqlcodegen-maven-plugin</artifactId>
         <configuration>
           <packageName>com.acme</packageName>
+          <schemaUrls>
+            <url>
+              https://raw.githubusercontent.com/deweyjose/graphqlcodegen-example/refs/heads/main/server/src/main/resources/schema/main.graphqls
+            </url>
+          </schemaUrls>
           <schemaPaths>
             <path>src/main/resources/schema/Actor.graphqls</path>
             <path>src/main/resources/schema/main.graphqls</path>

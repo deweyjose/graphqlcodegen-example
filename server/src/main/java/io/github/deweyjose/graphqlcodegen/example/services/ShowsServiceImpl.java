@@ -1,10 +1,8 @@
 package io.github.deweyjose.graphqlcodegen.example.services;
 
-
-
-import io.github.deweyjose.graphqlcodegen.example.common.Show;
 import com.acme.types.ShowInput;
 import graphql.com.google.common.collect.Lists;
+import io.github.deweyjose.graphqlcodegen.example.common.Show;
 import java.util.List;
 import org.springframework.stereotype.Service;
 

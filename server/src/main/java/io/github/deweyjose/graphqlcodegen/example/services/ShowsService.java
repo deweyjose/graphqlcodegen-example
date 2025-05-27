@@ -1,6 +1,5 @@
 package io.github.deweyjose.graphqlcodegen.example.services;
 
-
 import com.acme.types.ShowInput;
 import io.github.deweyjose.graphqlcodegen.example.common.Show;
 import java.util.List;
