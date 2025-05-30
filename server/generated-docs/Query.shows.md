@@ -1,4 +1,4 @@
-# Query.shows: [Show]
+# Query.shows: [Show!]
                  
 ## Arguments
 | Name | Description | Required | Type |
@@ -12,6 +12,7 @@
     id
     title
     releaseYear
+    comments
   }
 }
 

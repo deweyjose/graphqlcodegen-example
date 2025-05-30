@@ -40,6 +40,7 @@
         <groupId>io.github.deweyjose</groupId>
         <artifactId>graphqlcodegen-maven-plugin</artifactId>
         <configuration>
+          <autoAddSource>false</autoAddSource>
           <typeMapping>
             <Locale>java.util.Locale</Locale>
             <Show>io.github.deweyjose.graphqlcodegen.example.common.Show</Show>
