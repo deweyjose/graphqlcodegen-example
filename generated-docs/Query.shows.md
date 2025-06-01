@@ -9,10 +9,10 @@
 ```graphql
 {
   shows(titleFilter: "randomString") {
-    id
-    title
-    releaseYear
     comments
+    id
+    releaseYear
+    title
   }
 }
 
