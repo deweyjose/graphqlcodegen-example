@@ -1,11 +1,9 @@
-package io.github.deweyjose.graphqlcodegen.example.datafetchers;
+package io.github.deweyjose.graphqlcodegen.example.server.datafetchers;
 
 import com.acme.types.ShowInput;
-import com.netflix.graphql.dgs.DgsComponent;
-import com.netflix.graphql.dgs.DgsData;
-import com.netflix.graphql.dgs.InputArgument;
+import com.netflix.graphql.dgs.*;
 import io.github.deweyjose.graphqlcodegen.example.common.Show;
-import io.github.deweyjose.graphqlcodegen.example.services.ShowsService;
+import io.github.deweyjose.graphqlcodegen.example.server.services.ShowsService;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +19,7 @@ public class ShowsDatafetcher {
    * This datafetcher resolves the shows field on Query. It uses an @InputArgument to get the
    * titleFilter from the Query if one is defined.
    */
-  @DgsData(parentType = "Query", field = "shows")
+  @DgsQuery
   public List<Show> shows(@InputArgument("titleFilter") String titleFilter) {
     if (titleFilter == null) {
       return showsService.shows();
@@ -32,7 +30,7 @@ public class ShowsDatafetcher {
         .collect(Collectors.toList());
   }
 
-  @DgsData(parentType = "Mutation", field = "createShow")
+  @DgsMutation
   public Show createShow(@InputArgument("showInput") ShowInput showInput) {
     return showsService.add(showInput);
   }

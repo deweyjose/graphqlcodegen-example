@@ -52,11 +52,9 @@
           <generateBoxedTypes>true</generateBoxedTypes>
           <generateClientApi>true</generateClientApi>
           <writeToFiles>true</writeToFiles>
-          <typeMappingPropertiesFiles>
-            <typeMappingPropertiesFile>src/main/resources/common-type-mappings.properties</typeMappingPropertiesFile>
-          </typeMappingPropertiesFiles>
           <includeQueries>
             <param>shows</param>
+            <param>theaters</param>
           </includeQueries>
         </configuration>
       </plugin>

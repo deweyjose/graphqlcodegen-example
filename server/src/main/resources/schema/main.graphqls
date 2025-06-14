@@ -1,5 +1,6 @@
 type Query {
     shows(titleFilter: String): [Show!]
+    theaters: [Theater!]
 }
 
 type Mutation {
@@ -8,4 +9,10 @@ type Mutation {
 
 type Subscription {
   commentAdded(postID: ID!): Comment
+}
+
+type Theater {
+    id: ID!
+    name: String!
+    location: String!
 }

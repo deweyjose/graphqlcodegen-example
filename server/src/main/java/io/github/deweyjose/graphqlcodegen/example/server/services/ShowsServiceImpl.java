@@ -1,4 +1,4 @@
-package io.github.deweyjose.graphqlcodegen.example.services;
+package io.github.deweyjose.graphqlcodegen.example.server.services;
 
 import com.acme.types.ShowInput;
 import graphql.com.google.common.collect.Lists;

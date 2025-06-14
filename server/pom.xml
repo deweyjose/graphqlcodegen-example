@@ -75,9 +75,11 @@
           <generateInterfaceSetters>true</generateInterfaceSetters>
           <generateInterfaceMethodsForInterfaceFields>false
           </generateInterfaceMethodsForInterfaceFields>
+          <localTypeMappingPropertiesFiles>
+            <localTypeMappingPropertiesFile>src/main/resources/type-mapping.properties</localTypeMappingPropertiesFile>
+          </localTypeMappingPropertiesFiles>
           <typeMappingPropertiesFiles>
-            <typeMappingPropertiesFile>graphql/common-type-mappings.properties
-            </typeMappingPropertiesFile>
+            <typeMappingPropertiesFile>graphql/common-type-mappings.properties</typeMappingPropertiesFile>
           </typeMappingPropertiesFiles>
         </configuration>
       </plugin>
