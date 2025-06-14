@@ -52,7 +52,6 @@
           <generateBoxedTypes>true</generateBoxedTypes>
           <generateClientApi>true</generateClientApi>
           <writeToFiles>true</writeToFiles>
-          <generateDocs>true</generateDocs>
           <typeMappingPropertiesFiles>
             <typeMappingPropertiesFile>src/main/resources/common-type-mappings.properties</typeMappingPropertiesFile>
           </typeMappingPropertiesFiles>
