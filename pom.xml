@@ -19,6 +19,13 @@
 
   <properties>
     <java.version>17</java.version>
+    <!--
+      Remote schema URL the `server` module fetches at codegen time. Defaults to the
+      schema published on `main`; CI overrides it (-Dcodegen.server.schemaUrl=...) to
+      point at a locally-served copy of the pinned schema so the e2e build has no
+      external network dependency and stays consistent with the tested commit.
+    -->
+    <codegen.server.schemaUrl>https://raw.githubusercontent.com/deweyjose/graphqlcodegen-example/refs/heads/main/server/src/main/resources/schema/main.graphqls</codegen.server.schemaUrl>
     <junit.version>5.9.2</junit.version>
     <project-surefire-plugin.version>3.0.0-M5</project-surefire-plugin.version>
     <graphql-codegen-plugin.version>3.7.3</graphql-codegen-plugin.version>
